@@ -1,13 +1,22 @@
 <?php
 
-namespace Registry\Tests;
+namespace Tests;
 
-use Registry\Registry;
+use Registry;
 
-require __DIR__ . '/../Registry.php';
+spl_autoload_register(function ($class) {
+    include __DIR__ . '/../' . $class . '.php';
+});
 
+/**
+ * Class RegistryTest
+ * @package Registry\Tests
+ */
 class RegistryTest
 {
+    /**
+     * Test registry.
+     */
     public function test()
     {
         $key = Registry::LOGGER;
@@ -18,4 +27,5 @@ class RegistryTest
     }
 }
 
+// run test
 (new RegistryTest())->test();

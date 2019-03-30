@@ -1,7 +1,9 @@
 <?php
 
-namespace Registry;
-
+/**
+ * Class Registry
+ * @package Registry
+ */
 abstract class Registry
 {
     const LOGGER = 'logger';
@@ -23,7 +25,7 @@ abstract class Registry
 
     /**
      * @param string $key
-     * @param mixed  $value
+     * @param mixed $value
      *
      * @return void
      */
